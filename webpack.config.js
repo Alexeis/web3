@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.js',
@@ -24,5 +25,10 @@ module.exports = {
             buffer: require.resolve('buffer'),
             stream: require.resolve('stream-browserify'),
         },
-    },   
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            process: 'process/browser',
+          }),
+    ],   
 };

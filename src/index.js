@@ -12,6 +12,7 @@ window.onload = function() {
 
     //Functions
     const connect = async () => {
+        alert("Instala MetaMask u otro proveedor de web3");
         if (window.ethereum) {
             await window.ethereum.request({ method: 'eth_requestAccounts' });
 
